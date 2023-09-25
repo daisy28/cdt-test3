@@ -1,0 +1,500 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decoration: none;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+     cursor: pointer;
+}
+
+.navigation {
+     /* height: 200px; */
+     background-color: #f3f5ff;
+     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.104);
+     padding: 1rem;
+}
+
+.navigation_div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.home_icon {
+     width: 25px;
+     height: 25px;
+}
+
+.home_icon img {
+     width: 100%;
+}
+
+.menu_div {
+     width: 20px;
+     height: 40px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: .2rem;
+     cursor: pointer;
+}
+
+.menu_div div {
+     width: 100%;
+     border-radius: 2px;
+     height: 2px;
+     background-color: #4457ff;
+}
+
+.menu_list {
+     background-color: #4457ff;
+     position: relative;
+     display: none;
+     transition: 1s;
+     top: 16px;
+}
+
+.show_menu {
+     display: block;
+     transition: 1s;
+}
+
+.menu_list_items,
+.menu_input_div {
+  background-image: linear-gradient(
+    to bottom,
+#f3f5ff 0%,
+    #448fff 100%,
+#4457ff
+  );
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pl_menu_toggle{
+     cursor: pointer;
+}
+
+.search_input {
+     height: 54px;
+     border: 1px solid #6b7276;
+     background-color: #fff;
+     padding: 15px;
+     padding-left: 45px;
+     border-radius: 40px;
+     position: relative;
+     outline: none;
+     color: #6b7276;
+     width: 100%;
+     max-width: 256px;
+     /* margin: auto; */
+}
+
+.search_icon {
+     position: absolute;
+     left: 30px;
+}
+
+.menu_list_items a {
+     font-size: 1rem;
+     line-height: 21.79px;
+     font-weight: 600;
+     color: #0b0a33;
+}
+
+.menu_list_btn {
+     background-color: #4457ff;
+     width: 230px;
+     border-radius: 30px;
+     padding: 15px 20px;
+     padding-left: 38px;
+     font-weight: 600;
+     font-size: 1rem;
+     line-height: 21.79px;
+     color: #fff;
+     border: none;
+     outline: none;
+     position: relative;
+     width: 100%;
+     max-width: 256px;
+}
+
+.location_icon {
+     position: absolute;
+     left: 40px;
+     bottom: 32px;
+}
+
+.hero_section {
+     background-image: url("./Assets/Vector.svg");
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 500px;
+}
+
+.hero_section_div {
+     padding: 1rem;
+     max-width: 687px;
+     margin: auto;
+}
+
+.hero_section_heading {
+     font-weight: 600;
+     font-size: 2rem;
+     color: #0b0a33;
+     line-height: 42.16px;
+     text-align: center;
+     margin-bottom: 1.5rem;
+}
+
+.hero_section_text {
+     font-weight: 400;
+     font-size: 1.3rem;
+     line-height: 28px;
+     text-align: center;
+     color: #6b7276;
+     margin-bottom: 3rem;
+}
+
+.hero_search_div {
+     position: relative;
+     width: 100%;
+}
+
+.hero_input {
+     border: 1.4px solid #4457ff;
+     width: 100%;
+     max-width: 100%;
+}
+
+.hero_search_div .search_icon {
+     top: 16px;
+     left: 20px;
+}
+
+.booking_section {
+     background-image: url("Assets/Rectangle 6.svg");
+}
+
+.booking_section_div {
+     padding: 1rem;
+     margin-bottom: 1.5rem;
+     max-width: 687px;
+     margin: auto;
+}
+
+.booking_container {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.booking_heading {
+     font-weight: 700;
+     font-size: 1.4rem;
+     line-height: 38.13px;
+     color: #448fff;
+}
+
+.booking_group {
+     background-color: #fff;
+     padding: 1rem;
+     border-radius: 2px;
+     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.104);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 2rem;
+     width: 100%;
+     /* align-items: center; */
+}
+
+.booking_city_div {
+     display: flex;
+     gap: 1.5rem;
+     /* align-items: center; */
+     flex-direction: column;
+}
+
+.city_input {
+     width: 100%;
+     max-width: 266px;
+     height: 38px;
+     border-radius: 2px;
+     border: 1px solid #6b7276;
+     padding: 8px 10px;
+     background-color: #fff;
+     color: #6b7276;
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 21.79px;
+     outline: none;
+}
+
+.calendar_section {
+     display: flex;
+     align-items: center;
+     gap: .6rem;
+}
+
+.calendar_div {
+     display: flex;
+     gap: .4rem;
+}
+
+.calendar_div p{
+     font-weight: 400;
+     font-size: 1rem;
+     line-height: 21.79px;
+     color: #448fff;
+}
+
+.divider {
+     color: #6b7276;
+     font-weight: 500;
+}
+
+.city_btn,
+.guest_btn {
+     width: 117px;
+     height: 38px;
+     border-radius: 2px;
+     padding: 8px 32px;
+     background-color: #448fff;
+     font-weight: 600;
+     font-size: 1rem;
+     line-height: 21.79px;
+     color: #fff;
+     border: none;
+     outline: none;
+}
+
+.guest_div {
+     position: relative;
+}
+
+.guest_btn {
+     width: 141px;
+     background-color: transparent;
+     border: 1.5px solid #448fff;
+     color: #448fff;
+}
+
+.guest_img {
+     position: absolute;
+     left: 15px;
+     top: 8px;
+}
+
+.cards_div {
+     padding: 1rem;
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: .5rem;
+     margin-top: 1.5rem;
+}
+
+.cards {
+     position: relative;
+     max-width: 300px;
+     height: 367px;
+     padding: 2rem 1rem;
+     border-radius: 8px;
+     background-color: #fff;
+     margin: auto;
+}
+
+.cards_img {
+     height: 100%;
+     width: 100%;
+}
+
+.card_detail {
+     position: absolute;
+     top: 70px;
+     left: 32px;
+     padding: 8px 12px;
+     gap: 4px;
+     background-color: #0b0a33;
+     display: flex;
+     flex-direction: column;
+}
+
+.flag_img {
+     width: 16px;
+     height: 12px;
+}
+
+.card_detail_texts ,
+.card_detail_texts2{
+     display: flex;
+     align-items: center;
+     gap: .5rem;
+}
+
+.card_detail_texts p {
+     font-weight: 700;
+     font-size: 18px;
+     line-height: 24.51px;
+     letter-spacing: -4%;
+     color: #fff;
+}
+
+.card_text {
+font-weight: 600;
+font-size: 1rem;
+line-height: 21.79px;
+     color: #fff;
+}
+
+.country_flags_div {
+     display: flex;
+     flex-direction: column;
+     gap: .6rem;
+     margin: 0;
+     position: relative;
+     max-width: 300px;
+     margin: auto;
+}
+
+.country_flag_div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 1rem;
+}
+
+.country_flag_div_details {
+     display: flex;
+     gap: .2rem;
+     align-items: center;
+}
+
+.country_flag_div_details p {
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 21.79px;
+     color: #4457ff;
+}
+
+.country_flag_div p {
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 21.79px;
+     color: #6b7276;
+}
+
+.flag_btn {
+     position: relative;
+     margin-top: 1rem;
+}
+
+.flag_btn button {
+     width: 100%;
+     max-width: 268px;
+     border-radius: 2px;
+     padding: 6px 43px;
+     background-color: #448fff;
+     font-size: 1rem;
+     font-weight: 600;
+     line-height: 21.79px;
+     color: #fff;
+     border: none;
+     outline: none;
+     text-align: center;
+     margin: auto;
+}
+
+.flag_btn img {
+     position: absolute;
+     top: 8px;
+     left: 70px;
+}
+
+@media screen and (max-width: 300px) {
+     .card_detail{
+          top: 100px;
+     }
+}
+
+@media screen and (min-width: 768px){
+
+     .hero_section {
+     height: 740px;
+     }
+
+     .hero_section_heading {
+     font-size: 4rem;
+     line-height: 87.16px;
+}
+
+.hero_section_text {
+     font-size: 1.8rem;
+     line-height: 38.13px;
+}
+
+.booking_city_div {
+     flex-direction: row;
+}
+
+.cards_div {
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+}
+
+}
+
+@media screen and (min-width: 1024px){
+     .menu_div {
+          display: none;
+     }
+     .menu_list,
+     .navigation {
+          display: flex;
+     }
+
+     .navigation  {
+          gap: .5rem;
+     }
+
+     .menu_list,
+     .menu_input_div,
+     .menu_list_items {
+          top: 0;
+          background: transparent;
+     }
+
+     .menu_list_items a,
+     .menu_list_btn {
+     font-size: .8rem;
+}
+
+.booking_section_div {
+     max-width: 100%;
+}
+
+.booking_container,
+.booking_group,
+.booking_city_div {
+     flex-direction: row;
+}
+
+.booking_container {
+     gap: 1.5rem;
+}
+
+.cards_div {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+}
