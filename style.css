@@ -1,758 +1,769 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 * {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
-     list-style: none;
-     text-decoration: none;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 button,
 .back_btn,
 .toggle {
-     cursor: pointer;
+  cursor: pointer;
 }
 
 .navigation {
-     background-color: #f3f5ff;
-     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.084);
-     padding: 1rem;
-     position: relative;
-     z-index: 20;
+  background-color: #f3f5ff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.084);
+  padding: 1rem;
+  position: relative;
+  z-index: 20;
 }
 
 .navigation_div {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home_icon {
-     width: 25px;
-     height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .home_icon img {
-     width: 100%;
+  width: 100%;
 }
 
 .menu_div {
-     width: 20px;
-     height: 40px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: .2rem;
-     cursor: pointer;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
 }
 
 .menu_div div {
-     width: 100%;
-     border-radius: 2px;
-     height: 2px;
-     background-color: #4457ff;
+  width: 100%;
+  border-radius: 2px;
+  height: 2px;
+  background-color: #4457ff;
 }
 
 .menu_list {
-     background-color: #4457ff;
-     position: relative;
-     display: none;
-     transition: 1s;
-     top: 22px;
+  background-color: #4457ff;
+  position: relative;
+  display: none;
+  transition: 1s;
+  top: 22px;
 }
 
 .show_menu {
-     display: block;
-     transition: 1s;
+  display: block;
+  transition: 1s;
 }
 
 .menu_list_items,
 .menu_input_div {
   background-image: linear-gradient(
     to bottom,
-#f3f5ff 0%,
+    #f3f5ff 0%,
     #448fff 100%,
-#4457ff
+    #4457ff
   );
   padding: 1rem;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-     font-weight: 600;
-     color: #0b0a33;
+  font-weight: 600;
+  color: #0b0a33;
 }
 
-.pl_menu_toggle{
-     cursor: pointer;
+.pl_menu_toggle {
+  cursor: pointer;
 }
 
 .sub_menu_container {
-     display: none;
+  display: none;
 }
 
 .sub_menu_container.toggle {
-     display: block;
+  display: block;
 }
 
 .back_btn {
-     color: crimson;
+  color: crimson;
 }
 
 .search_input {
-     height: 54px;
-     border: 1px solid #6b7276;
-     background-color: #fff;
-     padding: 15px;
-     padding-left: 45px;
-     border-radius: 40px;
-     position: relative;
-     outline: none;
-     color: #6b7276;
-     width: 100%;
-     max-width: 256px;
-     /* margin: auto; */
+  height: 54px;
+  border: 1px solid #6b7276;
+  background-color: #fff;
+  padding: 15px;
+  padding-left: 45px;
+  border-radius: 40px;
+  position: relative;
+  outline: none;
+  color: #6b7276;
+  width: 100%;
+  max-width: 256px;
+  /* margin: auto; */
 }
 
 .search_icon {
-     position: absolute;
-     left: 30px;
+  position: absolute;
+  left: 30px;
 }
 
 .menu_list_items a {
-     font-size: 1rem;
-     line-height: 21.79px;
-     font-weight: 600;
-     color: #0b0a33;
+  font-size: 1rem;
+  line-height: 21.79px;
+  font-weight: 600;
+  color: #0b0a33;
 }
 
 .menu_list_btn {
-     background-color: #4457ff;
-     width: 230px;
-     border-radius: 30px;
-     padding: 15px 20px;
-     padding-left: 38px;
-     font-weight: 600;
-     font-size: 1rem;
-     line-height: 21.79px;
-     color: #fff;
-     border: none;
-     outline: none;
-     position: relative;
-     width: 100%;
-     max-width: 256px;
+  background-color: #4457ff;
+  width: 230px;
+  border-radius: 30px;
+  padding: 15px 20px;
+  padding-left: 38px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 21.79px;
+  color: #fff;
+  border: none;
+  outline: none;
+  position: relative;
+  width: 100%;
+  max-width: 256px;
 }
 
 .location_icon {
-     position: absolute;
-     left: 40px;
-     bottom: 32px;
+  position: absolute;
+  left: 40px;
+  bottom: 32px;
 }
 
 .hero_section {
-     background-image: url("./Assets/Vector.svg");
-     background-color: #f3f5ff;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 500px;
+  background-image: url("./Assets/Vector.svg");
+  background-color: #f3f5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
 
 .hero_section_div {
-     padding: 1rem;
-     max-width: 687px;
-     margin: auto;
+  padding: 1rem;
+  max-width: 687px;
+  margin: auto;
 }
 
 .hero_section_heading {
-     font-weight: 600;
-     font-size: 2rem;
-     color: #0b0a33;
-     line-height: 42.16px;
-     text-align: center;
-     margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #0b0a33;
+  line-height: 42.16px;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .hero_section_text {
-     font-weight: 400;
-     font-size: 1.3rem;
-     line-height: 28px;
-     text-align: center;
-     color: #6b7276;
-     margin-bottom: 3rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 28px;
+  text-align: center;
+  color: #6b7276;
+  margin-bottom: 3rem;
 }
 
 .hero_search_div {
-     position: relative;
-     width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .hero_input {
-     border: 1.4px solid #4457ff;
-     width: 100%;
-     max-width: 100%;
+  border: 1.4px solid #4457ff;
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero_search_div .search_icon {
-     top: 16px;
-     left: 20px;
+  top: 16px;
+  left: 20px;
 }
 
 .booking_section {
-     background-image: url("./Assets/Rectangle 6 (1).svg");
-     background-color: #fff;
-     background-repeat: no-repeat;
+  background-image: url("./Assets/Rectangle 6 (1).svg");
+  background-color: #fff;
+  background-repeat: no-repeat;
 }
 
 .booking_section_div {
-     padding: 1rem;
-     margin-bottom: 1.5rem;
-     max-width: 687px;
-     margin: auto;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 687px;
+  margin: auto;
 }
 
 .booking_container {
-     display: flex;
-     flex-direction: column;
-     gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .booking_heading {
-     font-weight: 700;
-     font-size: 1.4rem;
-     line-height: 38.13px;
-     color: #448fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 38.13px;
+  color: #448fff;
 }
 
 .booking_group {
-     background-color: #fff;
-     padding: 1rem;
-     border-radius: 2px;
-     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.104);
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     gap: 2rem;
-     width: 100%;
-     /* align-items: center; */
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.104);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
 }
 
 .booking_city_div {
-     display: flex;
-     gap: 1.5rem;
-     /* align-items: center; */
-     flex-direction: column;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
 }
 
 .city_input {
-     width: 100%;
-     max-width: 266px;
-     height: 38px;
-     border-radius: 2px;
-     border: 1px solid #6b7276;
-     padding: 8px 10px;
-     background-color: #fff;
-     color: #6b7276;
-     font-size: 1rem;
-     font-weight: 400;
-     line-height: 21.79px;
-     outline: none;
+  width: 100%;
+  max-width: 266px;
+  height: 38px;
+  border-radius: 2px;
+  border: 1px solid #6b7276;
+  padding: 8px 10px;
+  background-color: #fff;
+  color: #6b7276;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 21.79px;
+  outline: none;
 }
 
 .calendar_section {
-     display: flex;
-     align-items: center;
-     gap: .6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .calendar_div {
-     display: flex;
-     gap: .4rem;
+  display: flex;
+  gap: 0.4rem;
 }
 
-.calendar_div p{
-     font-weight: 400;
-     font-size: 1rem;
-     line-height: 21.79px;
-     color: #448fff;
+.calendar_div p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 21.79px;
+  color: #448fff;
 }
 
 .divider {
-     color: #6b7276;
-     font-weight: 500;
+  color: #6b7276;
+  font-weight: 500;
 }
 
 .city_btn,
 .guest_btn {
-     width: 117px;
-     height: 38px;
-     border-radius: 2px;
-     padding: 8px 32px;
-     background-color: #448fff;
-     font-weight: 600;
-     font-size: 1rem;
-     line-height: 21.79px;
-     color: #fff;
-     border: none;
-     outline: none;
+  width: 117px;
+  height: 38px;
+  border-radius: 2px;
+  padding: 8px 32px;
+  background-color: #448fff;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 21.79px;
+  color: #fff;
+  border: none;
+  outline: none;
 }
 
 .guest_div {
-     position: relative;
+  position: relative;
 }
 
 .guest_btn {
-     width: 141px;
-     background-color: transparent;
-     border: 1.5px solid #448fff;
-     color: #448fff;
+  width: 141px;
+  background-color: transparent;
+  border: 1.5px solid #448fff;
+  color: #448fff;
 }
 
 .guest_img {
-     position: absolute;
-     left: 15px;
-     top: 8px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
 }
 
 .cards_div {
-     display: flex;
-     flex-direction: column;
-     gap: 1rem;
-     margin-top: 1.5rem;
-     padding-bottom: 4.5rem;
-     border-bottom: 0.7px solid #6b7276;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-bottom: 4.5rem;
+  border-bottom: 0.7px solid #6b7276;
 }
 
 .cards {
-     position: relative;
-     width: 100%;
-     max-width: 300px;
-     height: 367px;
-     padding: 2rem 1rem;
-     border-radius: 8px;
-     background-color: #fff;
-     margin: auto;
-     box-shadow: 3px 3px 20px hsla(0, 0%, 57%, 0.192);
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 367px;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: auto;
+  box-shadow: 3px 3px 20px hsla(0, 0%, 57%, 0.192);
 }
 
 .cards_img {
-     height: 100%;
-     width: 100%;
-     max-width: 300px;
-     object-fit: cover;
-     border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .card_detail {
-     position: absolute;
-     top: 70px;
-     left: 32px;
-     padding: 8px 12px;
-     gap: 4px;
-     background-color: #0b0a33;
-     display: flex;
-     flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 32px;
+  padding: 8px 12px;
+  gap: 4px;
+  background-color: #0b0a33;
+  display: flex;
+  flex-direction: column;
 }
 
 .flag_img {
-     width: 16px;
-     height: 12px;
+  width: 16px;
+  height: 12px;
 }
 
-.card_detail_texts ,
-.card_detail_texts2{
-     display: flex;
-     align-items: center;
-     gap: .5rem;
+.card_detail_texts,
+.card_detail_texts2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .card_detail_texts p {
-     font-weight: 700;
-     font-size: 18px;
-     line-height: 24.51px;
-     letter-spacing: -4%;
-     color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.51px;
+  letter-spacing: -4%;
+  color: #fff;
 }
 
 .card_text {
-font-weight: 600;
-font-size: 1rem;
-line-height: 21.79px;
-     color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 21.79px;
+  color: #fff;
 }
 
 .country_flags_div {
-     display: flex;
-     flex-direction: column;
-     gap: .6rem;
-     margin: 0;
-     position: relative;
-     max-width: 300px;
-     margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  position: relative;
+  max-width: 300px;
+  margin: auto;
 }
 
 .country_flag_div {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .country_flag_div_details {
-     display: flex;
-     gap: .2rem;
-     align-items: center;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
 }
 
 .country_flag_div_details p {
-     font-size: 1rem;
-     font-weight: 400;
-     line-height: 21.79px;
-     color: #4457ff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 21.79px;
+  color: #4457ff;
 }
 
 .country_flag_div p {
-     font-size: 1rem;
-     font-weight: 400;
-     line-height: 21.79px;
-     color: #6b7276;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 21.79px;
+  color: #6b7276;
 }
 
 .flag_btn {
-     position: relative;
-     margin-top: 1rem;
+  position: relative;
+  margin-top: 1rem;
 }
 
 .flag_btn button {
-     width: 100%;
-     max-width: 268px;
-     border-radius: 2px;
-     padding: 6px 43px;
-     background-color: #448fff;
-     font-size: 1rem;
-     font-weight: 600;
-     line-height: 21.79px;
-     color: #fff;
-     border: none;
-     outline: none;
-     text-align: center;
-     margin: auto;
+  width: 100%;
+  max-width: 268px;
+  border-radius: 2px;
+  padding: 6px 43px;
+  background-color: #448fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 21.79px;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin: auto;
 }
 
 .flag_btn img {
-     position: absolute;
-     top: 8px;
-     left: 70px;
+  position: absolute;
+  top: 8px;
+  left: 70px;
 }
 
 .popular_postcode_section {
-     background-image: url("./Assets/PopularP.svg");
-     background-color: #fff;
-     background-repeat: no-repeat;
+  background-image: url("./Assets/PopularP.svg");
+  background-color: #fff;
+  background-repeat: no-repeat;
 }
 
 .popular_postcode {
-     margin: 3rem auto;
-     padding: 1rem;
+  margin: 3rem auto;
+  padding: 1rem;
 }
 
 .popular_postcode h3,
 .postcode_benefits h3 {
-     font-weight: 400;
-     font-size: 16px;
-     line-height: 21.79px;
-     text-align: center;
-     color: #4457ff;
-     width: 108px;
-     background-color: #f3f5ff;
-     margin: auto;
-     padding: 16px;
-     border-radius: 80px;
-     margin-bottom: 1.2rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.79px;
+  text-align: center;
+  color: #4457ff;
+  width: 108px;
+  background-color: #f3f5ff;
+  margin: auto;
+  padding: 16px;
+  border-radius: 80px;
+  margin-bottom: 1.2rem;
 }
 
 .popular_postcode h1,
 .postcode_benefits h1 {
-     font-weight: 600;
-     font-size: 1.5rem;
-     line-height: 36px;
-     text-align: center;
-     color: #0b0a33;
-     margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 36px;
+  text-align: center;
+  color: #0b0a33;
+  margin-bottom: 1.2rem;
 }
 
 .popular_postcode p,
 .postcode_benefits p {
-     font-weight: 400;
-     font-size: 1.2rem;
-     line-height: 30px;
-     text-align: center;
-     color: #6b7276;
-     margin-bottom: 2.8rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 30px;
+  text-align: center;
+  color: #6b7276;
+  margin-bottom: 2.8rem;
 }
 
 .popular_postcodes_div {
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .popular_postcodes_div p {
-      font-weight: 400;
-     font-size: 1rem;
-     line-height: 30px;
-     text-align: center;
-     color: #3b3f42;
-     margin-bottom: 1.4rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 30px;
+  text-align: center;
+  color: #3b3f42;
+  margin-bottom: 1.4rem;
 }
 
 .postcode_benefits_section {
-     background-image: url("./Assets/Benefits.svg");
-     background-color: #f3f5ff;
-     background-blend-mode: multiply;
+  background-color: #f3f5ff;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  width: 100%;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+}
+
+.postcode_benefits_text {
+  position: relative;
+  z-index: 30;
 }
 
 .postcode_benefits {
-     padding: 1rem;
+  padding: 1rem;
+  padding-bottom: 5rem;
 }
 
 .postcode_benefits_cards {
-     display: flex;
-     flex-direction: column;
-     gap: 1rem;
-     border-bottom: 0.7px solid #6b7276;
-     padding-bottom: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 0.7px solid #6b7276;
+  padding-bottom: 4.5rem;
 }
 
 .postcode_benefits_card {
-     max-width: 364px;
-     /* height: 266px; */
-     margin: auto;
-     padding: 48px 16px;
-     border-radius: 24px;
-     background-color: #fff;
-     box-shadow: 3px 3px 20px hsla(0, 0%, 57%, 0.192);
+  max-width: 364px;
+  margin: auto;
+  padding: 48px 16px;
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 3px 3px 20px hsla(0, 0%, 57%, 0.192);
 }
 
 .postcode_benefits_card h1 {
-     font-weight: 600;
-     font-size: 28px;
-     line-height: 42px;
-     color: #4457ff;
-     text-align: left;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #4457ff;
+  text-align: left;
 }
 
 .postcode_benefits_card p {
-     font-weight: 400;
-     font-size: 18px;
-     line-height: 30px;
-     color: #6b7276;
-     text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #6b7276;
+  text-align: left;
 }
 
 .footer {
-     background-image: url("./Assets/Footer.svg");
-     background-color: #4457ff;
-     background-blend-mode: multiply;
+  background-image: url("./Assets/Footer.svg");
+  background-color: #4457ff;
+  background-repeat: no-repeat;
 }
 
 .footer_div {
-     display: flex;
-     flex-direction: column;
-     gap: 3.5rem;
-     padding: 2.5rem 1rem;
-     margin-bottom: 2.5rem;
-     margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 2.5rem 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .footer_items {
-     display: flex;
-     flex-direction: column;
-     gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .footer_items a,
 .footer_items h1,
 .footer_items p {
-     font-weight: 600;
-     font-size: 16px;
-     line-height: 32px;
-     text-align: left;
-     color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: left;
+  color: #fff;
 }
 
 .footer_item {
-     padding: 1rem;
+  padding: 1rem;
 }
 
 .footer_item p,
-.footer_item a{
-     text-align: center;
+.footer_item a {
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .hero_section {
+    height: 740px;
+  }
 
+  .hero_section_heading {
+    font-size: 4rem;
+    line-height: 87.16px;
+  }
 
-@media screen and (min-width: 768px){
+  .hero_section_text {
+    font-size: 1.8rem;
+    line-height: 38.13px;
+  }
 
-     .hero_section {
-     height: 740px;
-     }
+  .booking_city_div {
+    flex-direction: row;
+  }
 
-     .hero_section_heading {
-     font-size: 4rem;
-     line-height: 87.16px;
+  .cards_div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .cards {
+    margin: 0;
+  }
+
+  .popular_postcode h1 {
+    font-size: 2.4rem;
+    line-height: 56px;
+  }
+
+  .popular_postcodes_div p {
+    font-size: 1.8rem;
+    line-height: 43.58px;
+  }
+
+  .popular_postcodes_div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .postcode_benefits_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .postcode_benefits_card {
+    height: 266px;
+  }
+
+  .footer_div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer_items a,
+  .footer_items h1,
+  .footer_items p {
+    font-size: 18px;
+  }
 }
 
-.hero_section_text {
-     font-size: 1.8rem;
-     line-height: 38.13px;
-}
+@media screen and (min-width: 1024px) {
+  .menu_div {
+    display: none;
+  }
+  .menu_list,
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
 
-.booking_city_div {
-     flex-direction: row;
-}
+  .navigation {
+    gap: 0.5rem;
+  }
 
-.cards_div {
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-between;
-}
+  .menu_list,
+  .menu_input_div,
+  .menu_list_items {
+    top: 0;
+    background: transparent;
+  }
 
-.cards {
-     margin: 0;
-}
+  .menu_input_div {
+    padding: 0 0.5rem;
+  }
 
-.popular_postcode h1 {
-     font-size: 2.4rem;
-     line-height: 56px;
-}
+  .menu_list_items {
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
 
-.popular_postcodes_div p {
-     font-size: 1.8rem;
-     line-height: 43.58px;
-}
+  .menu_list_items a,
+  .menu_list_btn,
+  .sub_menu_container .menu_list_items {
+    font-size: 0.8rem;
+  }
 
-.popular_postcodes_div {
-     grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+  .menu_list_btn {
+    padding-left: 48px;
+  }
 
-.postcode_benefits_cards {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-}
+  .sub_menu_container {
+    position: absolute;
+    z-index: 40;
+    top: 97px;
+  }
 
-.postcode_benefits_card {
-     height: 266px;
-}
+  .back_btn {
+    display: none;
+  }
 
-.footer_div {
-     flex-direction: row;
-}
+  .booking_section_div {
+    max-width: 100%;
+    padding: 2rem 2.7rem;
+  }
 
-.footer_items a,
-.footer_items h1,
-.footer_items p {
-     font-size: 18px;
-}
+  .booking_container,
+  .booking_group,
+  .booking_city_div {
+    flex-direction: row;
+    align-items: center;
+  }
 
-}
+  .booking_container {
+    gap: 1.5rem;
+  }
 
-@media screen and (min-width: 1024px){
-     .menu_div {
-          display: none;
-     }
-     .menu_list,
-     .navigation {
-          display: flex;
-          align-items: center;
-     }
+  .cards_div {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 
-     .navigation  {
-          gap: .5rem;
-     }
-
-     .menu_list,
-     .menu_input_div,
-     .menu_list_items {
-          top: 0;
-          background: transparent;
-     }
-
-     .menu_input_div {
-          padding: 0 .5rem;
-     }
-
-     .menu_list_items {
-          align-items: flex-end;
-          gap: .5rem;
-     }
-
-     .menu_list_items a,
-     .menu_list_btn,
-     .sub_menu_container .menu_list_items {
-     font-size: .8rem;
-}
-
-.menu_list_btn {
-     padding-left: 48px;
-}
-
- .sub_menu_container {
-      position: absolute;
-      z-index: 40;
-      top: 97px;
- }
-
- .back_btn {
-     display: none;
- }
-
-.booking_section_div {
-     max-width: 100%;
-     padding: 2rem 2.7rem;
-}
-
-.booking_container,
-.booking_group,
-.booking_city_div {
-     flex-direction: row;
-     align-items: center;
-}
-
-.booking_container {
-     gap: 1.5rem;
-}
-
-.cards_div {
-     grid-template-columns: 1fr 1fr 1fr 1fr;
-     grid-template-rows: 1fr;
-     
-}
-
-.postcode_benefits_cards {
-     grid-template-columns: 1fr 1fr 1fr;
-}
+  .postcode_benefits_cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .menu_list_items {
+    gap: 0.5rem;
+  }
 
-     .menu_list_items {
-          gap: 0;
-     }
+  .booking_section_div {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .country_flags_div {
+    max-width: 300px;
+  }
 
-     .booking_section_div {
-     max-width: 100%;
-     padding: 1rem;
-}
-     .country_flags_div {
-     max-width: 300px;
-}
+  .popular_postcodes_div {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 
-.popular_postcodes_div {
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.footer_div{
-     padding: 3rem 5rem;
-}
+  .footer_div {
+    padding: 3rem 3.5rem;
+  }
 }
