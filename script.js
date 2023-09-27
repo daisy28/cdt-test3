@@ -116,7 +116,7 @@ menu.addEventListener("click", () => {
 const subMenuUI = (link1, link2, link3) => {
   return `
           <div class="menu_list_items back_btn">
-               <p>Back</p>
+               Back
           </div>
           <a href="#" class="menu_list_items">${link1}</a>
           <a href="#" class="menu_list_items">${link2}</a>
@@ -129,21 +129,21 @@ toggles.forEach((toggle) => {
     menuList.classList.toggle("show_menu");
 
     if (toggle.classList.contains("help_menu_toggle")) {
-      subMenu.style.left = "60px";
+      subMenu.style.left = "680px";
       subMenu.innerHTML = subMenuUI(
         "Help and Information",
         "About this Website",
         "Privacy Policy"
       );
     } else if (toggle.classList.contains("pl_menu_toggle")) {
-      subMenu.style.left = "265px";
+      subMenu.style.left = "218px";
       subMenu.innerHTML = subMenuUI(
         "Postcode Lists",
         "By County",
         "By Introduction Date"
       );
     } else {
-      subMenu.style.left = "430px";
+      subMenu.style.left = "335px";
       subMenu.innerHTML = subMenuUI(
         "Postcode Maps",
         "User Type",

@@ -7,12 +7,13 @@
      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-button {
+button,
+.back_btn,
+.toggle {
      cursor: pointer;
 }
 
 .navigation {
-     /* height: 200px; */
      background-color: #f3f5ff;
      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.104);
      padding: 1rem;
@@ -56,7 +57,7 @@ button {
      position: relative;
      display: none;
      transition: 1s;
-     top: 16px;
+     top: 22px;
 }
 
 .show_menu {
@@ -77,10 +78,24 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+     font-weight: 600;
+     color: #0b0a33;
 }
 
 .pl_menu_toggle{
      cursor: pointer;
+}
+
+.sub_menu_container {
+     display: none;
+}
+
+.sub_menu_container.toggle {
+     display: block;
+}
+
+.back_btn {
+     color: crimson;
 }
 
 .search_input {
@@ -622,6 +637,7 @@ line-height: 21.79px;
      .menu_list,
      .navigation {
           display: flex;
+          align-items: center;
      }
 
      .navigation  {
@@ -635,10 +651,34 @@ line-height: 21.79px;
           background: transparent;
      }
 
+     .menu_input_div {
+          padding: 0 .5rem;
+     }
+
+     .menu_list_items {
+          align-items: flex-end;
+          gap: .5rem;
+     }
+
      .menu_list_items a,
-     .menu_list_btn {
+     .menu_list_btn,
+     .sub_menu_container .menu_list_items {
      font-size: .8rem;
 }
+
+.menu_list_btn {
+     padding-left: 48px;
+}
+
+ .sub_menu_container {
+      position: absolute;
+      z-index: 40;
+      top: 97px;
+ }
+
+ .back_btn {
+     display: none;
+ }
 
 .booking_section_div {
      max-width: 100%;
@@ -667,6 +707,10 @@ line-height: 21.79px;
 }
 
 @media screen and (min-width: 1280px) {
+
+     .menu_list_items {
+          gap: 0;
+     }
      .country_flags_div {
      max-width: 300px;
 }
