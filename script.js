@@ -2,7 +2,7 @@ const nav = document.querySelector(".navigation");
 const menu = document.querySelector(".menu_div");
 const menuList = document.querySelector(".menu_list");
 const menuListDiv = document.querySelector(".menu_list_items");
-const postCodeDiv = document.querySelector(".post_code_div");
+const postCodeDiv = document.querySelector(".popular_postcodes_div");
 const toggles = document.querySelectorAll(".toggle");
 const subMenu = document.querySelector(".sub_menu_container");
 

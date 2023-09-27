@@ -187,9 +187,11 @@ button {
 
 .booking_section_div {
      padding: 1rem;
+     padding-bottom: 2.5rem;
      margin-bottom: 1.5rem;
      max-width: 687px;
      margin: auto;
+     border-bottom: 1px solid #afacac65;
 }
 
 .booking_container {
@@ -296,26 +298,30 @@ button {
 }
 
 .cards_div {
-     padding: 1rem;
      display: grid;
      grid-template-columns: 1fr;
-     gap: .5rem;
+     gap: 1rem;
      margin-top: 1.5rem;
 }
 
 .cards {
      position: relative;
+     width: 100%;
      max-width: 300px;
      height: 367px;
      padding: 2rem 1rem;
      border-radius: 8px;
      background-color: #fff;
      margin: auto;
+     box-shadow: 3px 3px 20px hsla(0, 0%, 57%, 0.192);
 }
 
 .cards_img {
      height: 100%;
      width: 100%;
+     max-width: 300px;
+     object-fit: cover;
+     border-radius: 8px;
 }
 
 .card_detail {
@@ -362,7 +368,7 @@ line-height: 21.79px;
      gap: .6rem;
      margin: 0;
      position: relative;
-     max-width: 300px;
+     width: 300px;
      margin: auto;
 }
 
@@ -420,11 +426,139 @@ line-height: 21.79px;
      left: 70px;
 }
 
-@media screen and (max-width: 300px) {
-     .card_detail{
-          top: 100px;
-     }
+.popular_postcode {
+     margin: 3rem auto;
+     padding: 1rem;
 }
+
+.popular_postcode h3,
+.postcode_benefits h3 {
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 21.79px;
+     text-align: center;
+     color: #4457ff;
+     width: 108px;
+     background-color: #f3f5ff;
+     margin: auto;
+     padding: 16px;
+     border-radius: 80px;
+     margin-bottom: 1.2rem;
+}
+
+.popular_postcode h1,
+.postcode_benefits h1 {
+     font-weight: 600;
+     font-size: 1.5rem;
+     line-height: 36px;
+     text-align: center;
+     color: #0b0a33;
+     margin-bottom: 1.2rem;
+}
+
+.popular_postcode p,
+.postcode_benefits p {
+     font-weight: 400;
+     font-size: 1.2rem;
+     line-height: 30px;
+     text-align: center;
+     color: #6b7276;
+     margin-bottom: 2.4rem;
+}
+
+.popular_postcodes_div {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.popular_postcodes_div p {
+      font-weight: 400;
+     font-size: 1rem;
+     line-height: 30px;
+     text-align: center;
+     color: #3b3f42;
+     margin-bottom: 1.4rem;
+}
+
+.postcode_benefits_section {
+     background-image: url("./Assets/Rectangle 6.svg");
+     background-color: #f3f5ff;
+     background-blend-mode: multiply;
+}
+
+.postcode_benefits {
+     padding: 1rem;
+}
+
+.postcode_benefits_cards {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 1rem;
+}
+
+.postcode_benefits_card {
+     /* max-width: 364px; */
+     margin: auto;
+     padding: 48px 32px;
+     border-radius: 24px;
+     background-color: #fff;
+     box-shadow: 3px 3px 20px hsla(0, 0%, 57%, 0.192);
+}
+
+.postcode_benefits_card h1 {
+     font-weight: 600;
+     font-size: 28px;
+     line-height: 42px;
+     color: #4457ff;
+     text-align: left;
+}
+
+.postcode_benefits_card p {
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 30px;
+     color: #6b7276;
+     text-align: left;
+}
+
+.footer {
+     background-color: #4457ff;
+}
+
+.footer_div {
+     display: flex;
+     flex-direction: column;
+     gap: 3.5rem;
+     padding: 1rem;
+     margin-bottom: 2.5rem;
+}
+
+.footer_items {
+     display: flex;
+     flex-direction: column;
+     gap: .5rem;
+}
+
+.footer_items a,
+.footer_items h1,
+.footer_items p {
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 32px;
+     text-align: left;
+     color: #fff;
+}
+
+.footer_item {
+     padding: 1rem;
+}
+
+.footer_item p,
+.footer_item a{
+     text-align: center;
+}
+
+
 
 @media screen and (min-width: 768px){
 
@@ -449,6 +583,34 @@ line-height: 21.79px;
 .cards_div {
      grid-template-columns: 1fr 1fr;
      grid-template-rows: 1fr 1fr;
+}
+
+.popular_postcode h1 {
+     font-size: 2.4rem;
+     line-height: 56px;
+}
+
+.popular_postcodes_div p {
+     font-size: 2rem;
+     line-height: 43.58px;
+}
+
+.popular_postcodes_div {
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.postcode_benefits_cards {
+     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer_div {
+     flex-direction: row;
+}
+
+.footer_items a,
+.footer_items h1,
+.footer_items p {
+     font-size: 18px;
 }
 
 }
@@ -486,6 +648,7 @@ line-height: 21.79px;
 .booking_group,
 .booking_city_div {
      flex-direction: row;
+     align-items: center;
 }
 
 .booking_container {
@@ -493,8 +656,22 @@ line-height: 21.79px;
 }
 
 .cards_div {
-          grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr;
+     
 }
 
+.country_flags_div {
+     max-width: 240px;
+}
+}
 
+@media screen and (min-width: 1280px) {
+     .country_flags_div {
+     max-width: 300px;
+}
+
+.popular_postcodes_div {
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 }
