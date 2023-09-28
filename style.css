@@ -668,6 +668,11 @@ tr:nth-child(even){
   grid-template-columns: repeat(6, 1fr);
 }
 
+  td {
+  padding: 1rem;
+}
+
+
   .postcode_benefits_cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
