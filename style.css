@@ -114,7 +114,6 @@ button,
   color: #6b7276;
   width: 100%;
   max-width: 256px;
-  /* margin: auto; */
 }
 
 .search_icon {
@@ -454,7 +453,6 @@ button,
 
 .popular_postcode {
   margin: 3rem auto;
-  padding: 1rem;
 }
 
 .popular_postcode h3,
@@ -492,18 +490,38 @@ button,
   margin-bottom: 2.8rem;
 }
 
-.popular_postcodes_div {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.popular_postcode h1,
+.popular_postcode p {
+  padding: 1rem;
+  max-width: 500px;
+  margin: auto;
 }
 
-.popular_postcodes_div p {
+.popular_postcodes_div {
+  margin-top: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding: .5rem;
   font-weight: 400;
   font-size: 1rem;
   line-height: 30px;
   text-align: center;
   color: #3b3f42;
-  margin-bottom: 1.4rem;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+tr:nth-child(even){
+  background-color: #f3f5ff;
 }
 
 .postcode_benefits_section {
@@ -645,9 +663,10 @@ button,
     line-height: 43.58px;
   }
 
-  .popular_postcodes_div {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+  tr {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
 
   .postcode_benefits_cards {
     display: grid;
@@ -737,12 +756,12 @@ button,
   }
 
   .cards_div {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }
 
   .postcode_benefits_cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -760,7 +779,7 @@ button,
   }
 
   .popular_postcodes_div {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .footer_div {
